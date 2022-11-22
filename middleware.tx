@@ -1,0 +1,7 @@
+React/Client-----[sends request]----->Server/Node/Express------[responds]------>React/Client
+                                        middleware-->Route-Handler
+
+
+Middleware: recieves the request from client and then sends it to the route handler
+
+Morgan Packege: thrid party middle ware has the route handler and console.log

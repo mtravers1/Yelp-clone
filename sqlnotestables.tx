@@ -1,0 +1,58 @@
+----Table---
+
+-Subject  or event in a applicaiton
+-columes represents a different attribute
+-rows represents each entry
+
+-----Creating Table-----
+CREATE TABLE products(
+    id INT,
+    name TEXT,
+    price INT,
+    on_sale boolean
+);
+
+-   \c 'databasename'
+
+---Modifying Table---
+add column:ALTER TABLE products ADD COLUMN featured boolean;
+delete column: ALTER TABLE products DROP COLUMN featured;
+delete table: DROP TABLE products;
+delete database: DELETE DATABASE practice;
+
+
+---yelp database---
+CREATE DATABASE yelp
+
+---Create restaurant table
+CREATE TABLE restaurants(
+    id INT,
+    name TEXT,
+    location TEXT,
+    price_range INT
+);
+
+
+---Insert data into table/rows---
+INSERT INTO restaurants(id, name, location, price_range) values (123, 'mcdonalds', 'new york', 3);
+
+---See the table---
+select * from restaurants;
+
+select name, price_range from restaurants;
+
+
+---Auto add id feild, constraints, range, and primary key---
+--in field, add BIGSERIAL to automatically add 1 to the id
+--add NOT NULL to make it required/make constraints
+--make sure inputed values is in the range 
+--Primary Key is always unique, and used to uniquely identify
+CREATE TABLE restaurants(
+    id BIGSERIAL NOT NULL PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    location  VARCHAR(50) NOT NULL,
+    price_range INT NOT NULL check(price_range>=1 and price_range<=5)
+);
+
+INSERT INTO restaurants (name, location, price_range ) values (123, 'la', 3);
+

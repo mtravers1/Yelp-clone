@@ -1,0 +1,23 @@
+Connecting server to database
+
+node-Postgres library
+npm i pg
+
+create new folder, add index.js file
+
+-import pg library and destructure pool
+
+-create new pool and pass through the object with
+user: 'postgres',
+    host: 'localhost',
+    database: 'yelp',
+    password: 'Taper101',
+    port: 3002
+
+to connect to database 
+
+-export query object
+
+import into server 
+
+

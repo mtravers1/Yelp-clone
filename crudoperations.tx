@@ -1,0 +1,7 @@
+# @format
+
+Retrieve all - GET - api/v1/restaurants
+Retrieve one - GET - api/v1/restaurants/:id
+Create - POST - api/v1/restaurants
+Update - PUT - api/v1/restaurants/:id
+Delete - DELETE - api/v1/restaurants/:id

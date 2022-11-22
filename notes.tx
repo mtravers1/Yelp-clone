@@ -1,0 +1,20 @@
+Postgres: SQl based database where data will be stored, ex:list of restaurants and reviews
+
+Backend:Nodejs and Expressjs
+
+NodeJS: allows us to run javascript on the server side
+Express: Web framework for NodeJS, makes it easy to build out a web server
+
+
+React:Front end, respondsible for sending requesting to api
+
+React--->NodeJS----> Postgres
+            CRUD
+Create-HTTP POST
+Read-HTTP GET
+Update-HTTP PUT
+Delete-HTTP DELETE
+
+
+React sends HTTP Methods to Node Server which will have all the logic for the methods
+The server/node gets the information from Postgres/database and responds back
